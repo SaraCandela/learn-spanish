@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Quiz to learn the animals in Spanish.">
+    <meta name="keywords" content="spanish, quiz, aniamal, learn Spanish">
+
     <!-- stylesheets link-->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Learn Spanish</title>
 </head>
 <body>
-      <h1 class="heading">Learn Spanish</h1>
+      <h1 class="heading">LEARN SPANISH</h1>
 
       <div class="game-area">
-        <div id="question-container">
-            <img class="question" src="assets/images/cat.jpg">
-            <p class="question" id="animal">Cat</p>
-        </div>
-        <div id="controls" class="btn-grid">
+        <section id="question-container">
+            <img class="question" id="image" src="assets/images/cat.jpg">
+            <p class="question" id="animal"><b>Cat</b></p>
+        </section>
+        <section id="controls">
            <button class="btn">Answer 1</button> 
            <button class="btn">Answer 2</button> 
            <button class="btn">Answer 3</button> 
            <button class="btn">Answer 4</button> 
-        </div>
-      </div>
-      <div class="score-area">
-        <p class="scores">Your score: <span id="score">0</span></p>
-        <button id="next" class="next-btn btn">Next</button>
+        </section>
+        <section class="score-area">
+            <p class="scores"><b>Your score: <span id="score">0</span></b></p>
+            <button id="next" class="next-btn btn">Next</button>
+        </section>
       </div>
     <script src="assets/js/script.js"></script>
 </body>

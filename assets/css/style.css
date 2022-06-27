@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Quicksand:wght@500&display=swap');
+
+/*------- Global style*/
+ body {
+    background-color: #0072A0;
+    font-family: Quicksand, sans-serif;
+    font-weight: 300;
+ }
+
+ /*----- Title*/
+
+ h1 {
+        font-family: Allerta Stencil, sans-serif;
+        text-align: center;
+        font-size: 3rem;
+        text-decoration: underline;
+    }
+
+
+/*---- Game layout*/
+
+.game-area {
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    width: 600px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+}
+
+#image{
+    margin-top: 35px;
+}
+
+/*---- Buttons*/
+
+.btn {
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    margin: 25px 0 25px 25px;
+    background-color: #0072A0;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+#next{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
