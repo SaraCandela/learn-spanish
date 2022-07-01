@@ -1,4 +1,5 @@
-let questions = [
+// create const
+const gameData = [
     {
         question: "assets/images/cat.jpg",
         a: "Gato",
@@ -76,7 +77,7 @@ let questions = [
         answer: "b"
     },
     {
-        question: "assets/images/horse.jpg",
+        question: "assets/images/horse.jpg", 
         a: "Gato",
         b: "Caballo",
         c: "Mono",
@@ -84,7 +85,7 @@ let questions = [
         answer: "b"
     },
     {
-        question: "assets/images/monkey.jpg",
+        question: "assets/images/monkey.jpg", 
         a: "Cerdo",
         b: "Oveja",
         c: "Mono",
@@ -124,15 +125,41 @@ let questions = [
         answer: "d"
     },    
 ];
- console.log(questions);
+const gameArea = document.getElementById('game-area');
+const questionContainer = document.getElementById('question-container');
+const answers = document.getElementById('answer-buttons');
+const score = document.getElementsByClassName('score-area');
+const next = document.getElementById ('next');
+
+let questionCounter = 0
+let scores = 0
+let currentQuestion;
+let availableQuestion = [];
+
+//call the functions. 
+
+setAvailableQuestion();
+getNewQuestion();
+
+
+// push the questions into availableQuestion Array
+function setAvailableQuestion(){
+    const totalQuestion = gameData.length;
+     for(let i=0; i<totalQuestion; i++){
+        availableQuestion.push(gameData[i])
+     }
+}
+//set question and get random question
+function getNewQuestion() {
+    const questionIndex = availableQuestion[Math.floor(Math.random() * availableQuestion.length)];
+    currentQuestion = questionIndex;
+    questionContainer.innerHTML = currentQuestion.question;
+}
 
 function selectAnswer(){
 
 }
 
-function checkAnswer() {
-
-}
 
 function calculateCorrectAnswer(){
 
@@ -145,3 +172,4 @@ function incrementScore(){
 function setNextQuestion(){
 
 }
+
