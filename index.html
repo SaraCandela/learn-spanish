@@ -16,14 +16,22 @@
       <h1 class="heading">LEARN SPANISH</h1>
 
       <div id="game-area">
+        <div id="number"></div>
         <section id="question-container"></section>
-        <section id="answer-buttons"></section>
+        <section id="answer-buttons">
+          <button class="btn">answer 1</button> 
+          <button class="btn">answer 2</button> 
+          <button class="btn">answer 3</button> 
+          <button class="btn">answer 4</button>
+           </section>
         <section class="score-area">
             <p class="scores"><b>Your score: <span id="score">0</span></b></p>
-            <button id="next" class="next-btn btn">Next</button>
         </section>
+        <button id="next" class="next-btn btn" type="button" onclick="next()">Next</button>
       </div>
     
+    <script src="assets/js/quiz.js"></script>
     <script src="assets/js/script.js"></script>
+    
 </body>
 </html>

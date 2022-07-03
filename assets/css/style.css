@@ -30,6 +30,12 @@
     box-shadow: 0 0 10px 2px;
 }
 
+#number {
+    color: #0072A0;
+    font-size: 30px;
+    
+}
+
 #image{
     margin-top: 35px;
 }
