@@ -4,24 +4,25 @@ const answerButtons = document.getElementById ('answer-buttons')
 const scoreArea = document.getElementById ('score-area')
 const nextButton = document.getElementById ('next')
 
-let questionCounter = 0
+let questionCounter = 0;
 let scoreCounter = 0;
 let currentQuestion;
 let availableQuestions= [];
 
 
 //push the questions into availableQuestions Array.
-function setavailableQuestions(){
+
+function prefillAvailableQuestion(){
     const totalQuestions = gameData.length;
     for (let i=0; i<totalQuestions; i++){       
         availableQuestions.push(gameData[i])
     }
-    
-    document.getElementById('btn1').innerHTML=gameData[0].options[0]
-    document.getElementById('btn2').innerHTML=gameData[0].options[1]
-    document.getElementById('btn3').innerHTML=gameData[0].options[2]
-    document.getElementById('btn4').innerHTML=gameData[0].options[3]
-
+}
+function setavailableQuestions(question){
+    document.getElementById('btn1').innerHTML=question.options[0]
+    document.getElementById('btn2').innerHTML=question.options[1]
+    document.getElementById('btn3').innerHTML=question.options[2]
+    document.getElementById('btn4').innerHTML=question.options[3]
 }
 
 //set question and options
@@ -30,12 +31,13 @@ function newQuestion(){
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + gameData.length;
     // set question text
     //get random question
-    const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
-    currentQuestion = questionIndex;
-    questionContainer.innerHTML = currentQuestion.question;
-       console.log(questionIndex)
+    const index= Math.floor(Math.random() * availableQuestions.length);
+    const question = availableQuestions[index];
+    questionContainer.innerHTML = question.question;
+       setavailableQuestions(question);
+       availableQuestions.splice(index, 1);
+    questionCounter ++ ;
     
-    questionCounter ++ 
 } 
 
 function calculateCorrectAnswer(){}
@@ -51,9 +53,8 @@ function next(){
         newQuestion();
     }
 }
-//call Functions
-    //first we will set all questions in availableQuestions Array
-    setavailableQuestions();
-    //second we will call newQuestion(); function
-    newQuestion();
+
+prefillAvailableQuestion()
+newQuestion();
+
 
