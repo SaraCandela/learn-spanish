@@ -1,6 +1,5 @@
 const questionNumber = document.getElementById ('number')
 const questionContainer = document.getElementById('question-container')
-const answerButtons = document.getElementById ('answer-buttons')
 const scoreArea = document.getElementById ('score-area')
 const nextButton = document.getElementById ('next')
 
@@ -9,38 +8,50 @@ let scoreCounter = 0;
 let currentQuestion;
 let availableQuestions= [];
 
+//Functions.
 
-//push the questions into availableQuestions Array.
-
-function prefillAvailableQuestion(){
+//set availableQuestions into an Array
+function setQuestions(){
     const totalQuestions = gameData.length;
     for (let i=0; i<totalQuestions; i++){       
         availableQuestions.push(gameData[i])
     }
 }
-function setavailableQuestions(question){
-    document.getElementById('btn1').innerHTML=question.options[0]
-    document.getElementById('btn2').innerHTML=question.options[1]
-    document.getElementById('btn3').innerHTML=question.options[2]
-    document.getElementById('btn4').innerHTML=question.options[3]
+//Set Answers in HTML with quiz.js options.
+function setChoices(questionRandom){
+    document.getElementById('btn1').innerHTML=questionRandom.options[0]
+    document.getElementById('btn2').innerHTML=questionRandom.options[1]
+    document.getElementById('btn3').innerHTML=questionRandom.options[2]
+    document.getElementById('btn4').innerHTML=questionRandom.options[3]
 }
 
-//set question and options
+
+// create a randomize questions and options and add counter.
 function newQuestion(){
     //set question number
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + gameData.length;
-    // set question text
-    //get random question
+    //get random question/choices
     const index= Math.floor(Math.random() * availableQuestions.length);
-    const question = availableQuestions[index];
-    questionContainer.innerHTML = question.question;
-       setavailableQuestions(question);
-       availableQuestions.splice(index, 1);
+    const questionRandom = availableQuestions[index];
+    questionContainer.innerHTML = questionRandom.question;
+    availableQuestions.splice(index, 1);
+    setChoices(questionRandom)
     questionCounter ++ ;
     
 } 
 
-function calculateCorrectAnswer(){}
+function calculateCorrectAnswer(){
+    let options = questionRandom.options
+    let answer = gameData.answer
+    if( options === answer){
+    document.getElementsByClassName('btn')
+    .addEventListener('click', function(correctAns){
+        correctAns.target.classList.add ('correct')
+    })
+    }else{
+        document.getElementsByClassName('btn').classList.add('incorrect');
+    }
+}
 
 function incrementScore(){}
 
@@ -54,7 +65,8 @@ function next(){
     }
 }
 
-prefillAvailableQuestion()
+setQuestions();
 newQuestion();
+calculateCorrectAnswer()
 
 
