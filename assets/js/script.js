@@ -42,6 +42,10 @@ function newQuestion(){
     
 } 
 
+function disableAnswers(){
+   forEach.document.getElementsByClassName('btn');
+}
+
 function calculateCorrectAnswer(){
     let options = Object.entries(gameData);
     if( options === answer){
