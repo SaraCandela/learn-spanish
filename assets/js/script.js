@@ -17,6 +17,7 @@ function setQuestions(){
         availableQuestions.push(gameData[i])
     }
 }
+
 //Set Answers in HTML with quiz.js options.
 function setChoices(questionRandom){
     document.getElementById('btn1').innerHTML=questionRandom.options[0]
@@ -24,7 +25,6 @@ function setChoices(questionRandom){
     document.getElementById('btn3').innerHTML=questionRandom.options[2]
     document.getElementById('btn4').innerHTML=questionRandom.options[3]
 }
-
 
 // create a randomize questions and options and add counter.
 function newQuestion(){
@@ -39,23 +39,28 @@ function newQuestion(){
 
     
     questionCounter ++ ;
-    
+    disableAnswers(false);
 } 
 
-function disableAnswers(){
-   forEach.document.getElementsByClassName('btn');
-}
+function disableAnswers(isDisabled){
+    // Get a list of all elements by classname
+   let buttons = document.getElementsByClassName('btn');
 
-function calculateCorrectAnswer(){
-    let options = Object.entries(gameData);
-    if( options === answer){
-    document.getElementsByClassName('btn')
-    .addEventListener('click', function(correctAns){
-        correctAns.target.classList.add ('correct')
-    })
-    }else{
-        document.getElementsByClassName('btn').classList.add('incorrect');
+   // Loop through the HTML Collection
+   [].forEach.call(buttons, function (el) {
+    el.disabled = isDisabled;
+
+    if (isDisabled) {
+      // Disable all answers
+      el.classList.add('disabled');
+    } else {
+        // Enable the answers
+        el.classList.remove('disabled');
     }
+        // alert(el.innerHTML);
+        // el.classList.add('incorrect');
+   });
+
 }
 
 function incrementScore(){}
@@ -73,6 +78,4 @@ function next(){
 // call funtions
 setQuestions();
 newQuestion();
-calculateCorrectAnswer()
-
-
+// calculateCorrectAnswer()

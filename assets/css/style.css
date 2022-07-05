@@ -51,6 +51,7 @@
     border-radius: 5px;
     padding: 5px 10px;
     color: black;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -73,4 +74,16 @@
     background: rgb(230,29,29);
     border-color: black;
 }
+
+.disabled, .disabled:hover {
+    color:white;
+    background-color: silver;
+    border-color: white;
+}
+
+
+
+
+
+
 
