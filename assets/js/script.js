@@ -36,13 +36,14 @@ function newQuestion(){
     questionContainer.innerHTML = questionRandom.question;
     availableQuestions.splice(index, 1);
     setChoices(questionRandom)
+
+    
     questionCounter ++ ;
     
 } 
 
 function calculateCorrectAnswer(){
-    let options = questionRandom.options
-    let answer = gameData.answer
+    let options = Object.entries(gameData);
     if( options === answer){
     document.getElementsByClassName('btn')
     .addEventListener('click', function(correctAns){
@@ -65,6 +66,7 @@ function next(){
     }
 }
 
+// call funtions
 setQuestions();
 newQuestion();
 calculateCorrectAnswer()
