@@ -2,6 +2,7 @@ const questionNumber = document.getElementById ('number')
 const questionContainer = document.getElementById('question-container')
 const scoreArea = document.getElementById ('score-area')
 const nextButton = document.getElementById ('next')
+const results = document.getElementById ('results')
 
 let questionCounter = 0;
 let scoreCounter = 0;
@@ -65,7 +66,7 @@ function disableAnswers(isDisabled){
 function incrementScore(){
     if(el.innerHTML===answer){
     el.classList.add('correct');
-    score ++
+    scoreCounter ++
     }else {
     el.classList.add('incorrect');
     }
@@ -81,7 +82,13 @@ function next(){
     }
 }
 
+function result(){
+    //set results
+    results.innerHTML = "Your socre is: " + (scoreCounter) + " of " + gameData.length;
+}
+
 // call funtions
 setQuestions();
 newQuestion();
+result();
 // calculateCorrectAnswer()
