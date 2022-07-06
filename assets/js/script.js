@@ -7,6 +7,8 @@ let questionCounter = 0;
 let scoreCounter = 0;
 let currentQuestion;
 let availableQuestions= [];
+// Get a list of all elements by classname
+let buttons = document.getElementsByClassName('btn');
 
 //Functions.
 
@@ -43,11 +45,8 @@ function newQuestion(){
 } 
 
 function disableAnswers(isDisabled){
-    // Get a list of all elements by classname
-   let buttons = document.getElementsByClassName('btn');
-
    // Loop through the HTML Collection
-   [].forEach.call(buttons, function (el) {
+   gameData.forEach.call(buttons, function (el) {
     el.disabled = isDisabled;
 
     if (isDisabled) {
@@ -63,7 +62,14 @@ function disableAnswers(isDisabled){
 
 }
 
-function incrementScore(){}
+function incrementScore(buttons){
+    if(el.innerHTML===answer){
+    el.classList.add('correct');
+    score ++
+    }else {
+    el.classList.add('incorrect');
+    }
+    }
 
 
 
@@ -78,4 +84,4 @@ function next(){
 // call funtions
 setQuestions();
 newQuestion();
-// calculateCorrectAnswer()
+incrementScore(buttons)
