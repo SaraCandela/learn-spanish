@@ -75,7 +75,7 @@ function incrementScore(){
 
 function next(){
     if(questionCounter === gameData.length){
-        console.log("quiz over");
+        return window.location.assign('/scores.html');
     } else{
         newQuestion();
     }
