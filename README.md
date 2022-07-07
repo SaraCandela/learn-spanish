@@ -54,7 +54,7 @@ The idea is simple, an image is displayed with the name of the animal in English
 
  ## Testing
 
-* I tested that this page works in different browsers: Chrome, Firefox, Explorer and Safari. (MISSING LAST PAGE IN ALL BUT CHOME!!.)
+* I tested that this page works in different browsers: Chrome, Firefox and Safari. (not showing in Explorer!!!!!)
 * I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the DevTools device toolbar. 
 * I confirmed "buttons and features"  
 

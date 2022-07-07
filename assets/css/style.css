@@ -9,7 +9,7 @@
 
  /*Title*/
 
- h1 {
+ .heading {
         font-family: Allerta Stencil, sans-serif;
         text-align: center;
         font-size: 3rem;
@@ -95,6 +95,8 @@
     margin: 20px auto;
 }
 }
+
+
 
 
 
