@@ -76,7 +76,7 @@ function incrementScore(){
 
 function next(){
     if(questionCounter === gameData.length){
-        return window.location.assign('/scores.html');
+        return window.location.assign('scores.html');
     } else{
         newQuestion();
     }
@@ -91,4 +91,3 @@ function result(){
 setQuestions();
 newQuestion();
 result();
-// calculateCorrectAnswer()
