@@ -86,8 +86,15 @@
 }
 
 
+/*Media Quary*/
+/*For small screen sizes from 542px and down */
 
-
+@media screen and (max-width: 542px){
+.btn {
+    display: block;
+    margin: 20px auto;
+}
+}
 
 
 
