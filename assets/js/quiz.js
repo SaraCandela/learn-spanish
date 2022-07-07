@@ -1,4 +1,4 @@
-
+/* Questions and answers for the quiz */
 const gameData = [
     {
         question: `<img class="question" id="image" src="assets/images/cat.jpg" alt="cat">

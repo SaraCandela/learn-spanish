@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Quiz to learn the animals in Spanish.">
+    <meta name="description" content="A Quiz to learn animals in Spanish.">
     <meta name="keywords" content="spanish, quiz, animal, learn Spanish">
 
     <!-- stylesheets link-->
@@ -16,20 +16,23 @@
       <h1 class="heading">LEARN SPANISH</h1>
 
       <div id="game-area">
+        <!-- Question counter from 1 to 15 -->
         <div id="number"></div>
+        <!--Images and paragraph that can be found on quiz.js-->
         <div id="question-container"></div>
-        <section id="answer-buttons">
+        <div id="answer-buttons">
           <button class="btn" id="btn1" data-type="btn1" onclick="disableAnswers(true);">answer 1</button> 
           <button class="btn" id="btn2" data-type="btn2" onclick="disableAnswers(true);">answer 2</button> 
           <button class="btn" id="btn3" data-type="btn3" onclick="disableAnswers(true);">answer 3</button> 
           <button class="btn" id="btn4" data-type="btn4" onclick="disableAnswers(true);">answer 4</button>
-           </section>
-        <section class="score-area">
+        </div>
+        <div class="score-area">
             <p class="scores"><b>Your score: <span id="score">0</span></b></p>
-        </section>
+        </div>
         <button id="next" class="next-btn" data-type="next" onclick="next()">Next</button>
       </div>
-    
+
+    <!--script links-->
     <script src="assets/js/quiz.js"></script>
     <script src="assets/js/script.js"></script>
     

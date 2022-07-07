@@ -11,7 +11,7 @@ let availableQuestions= [];
 
 //Functions.
 
-//set availableQuestions into an Array
+//Push the questions into availableQuestions Array.
 function setQuestions(){
     const totalQuestions = gameData.length;
     for (let i=0; i<totalQuestions; i++){       
@@ -19,7 +19,7 @@ function setQuestions(){
     }
 }
 
-//Set Answers in HTML with quiz.js options.
+//Set buttons in HTML with quiz.js options.
 function setChoices(questionRandom){
     document.getElementById('btn1').innerHTML=questionRandom.options[0]
     document.getElementById('btn2').innerHTML=questionRandom.options[1]
@@ -35,11 +35,13 @@ function newQuestion(){
     const index= Math.floor(Math.random() * availableQuestions.length);
     const questionRandom = availableQuestions[index];
     questionContainer.innerHTML = questionRandom.question;
+    //Avoid questions to repeat. 
     availableQuestions.splice(index, 1);
+    //Call setChoices function with questionRandom so the choices are also randomized. 
     setChoices(questionRandom)
 
-    
     questionCounter ++ ;
+    //Call disableAnswer(false), so when a new answer showns the answers can be chosen. 
     disableAnswers(false);
 } 
 
@@ -64,6 +66,7 @@ function disableAnswers(isDisabled){
 
 }
 function incrementScore(){
+    // increments score and shows correct answer??
     if(el.innerHTML===answer){
     el.classList.add('correct');
     scoreCounter ++
@@ -75,6 +78,7 @@ function incrementScore(){
 
 
 function next(){
+    //If statement, showing new question when next is pressed and when questions are over shows "scores.html"
     if(questionCounter === gameData.length){
         return window.location.assign('scores.html');
     } else{
@@ -84,10 +88,12 @@ function next(){
 
 function result(){
     //set results
-    results.innerHTML = "Your socre is: " + (scoreCounter) + " of " + gameData.length;
+    results.innerHTML = "Your score is: " + (scoreCounter) + " of " + gameData.length;
 }
 
-// call funtions
+// Call funtions
+//first set all questions in availableQuestions Array.
 setQuestions();
+//second call newQuestion(); function.
 newQuestion();
 result();

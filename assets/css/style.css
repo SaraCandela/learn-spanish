@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Quicksand:wght@500&display=swap');
 
-/*------- Global style*/
+/*Global style*/
  body {
     background-color: #0072A0;
     font-family: Quicksand, sans-serif;
     font-weight: 300;
  }
 
- /*----- Title*/
+ /*Title*/
 
  h1 {
         font-family: Allerta Stencil, sans-serif;
@@ -17,7 +17,7 @@
     }
 
 
-/*---- Game layout*/
+/* Game layout*/
 
 #game-area {
     margin: 0 auto;
@@ -40,7 +40,7 @@
     margin-top: 35px;
 }
 
-/*---- Buttons*/
+/* Buttons*/
 
 .btn, .next-btn, .home {
     font-family: Quicksand, sans-serif;
