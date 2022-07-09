@@ -29,9 +29,11 @@ The idea is simple, an image is displayed with the name of the animal in English
 ![Question](/assets/images/imagesReadMe/question.JPG)
 
 * Answers:
-    * Four buttons with the possible answers, when they are press if the answer is correct will show a green background and if the answer is incorrect will be red background. Once one answer is press the other anwers will show disabled. 
+    * Four buttons with the possible answers, when they are press if the answer is correct will show a green background and if the answer is incorrect will be red background. Once one answer is press the other anwers will be disabled. 
 
 ![Answers](/assets/images/imagesReadMe/Options.JPG) 
+
+![Correct Answers](/assets/images/imagesReadMe/correct-incorrect.JPG)
 
 * Score:
     * If the answer is correct the score area will increase by 1.
@@ -54,11 +56,14 @@ The idea is simple, an image is displayed with the name of the animal in English
 
  ## Testing
 
-* I tested that this page works in different browsers: Chrome, Firefox and Safari. (not showing in Explorer!!!!!)
+* I tested that this page works in different browsers: Chrome, Firefox and Safari.
 * I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the DevTools device toolbar. 
 * I confirmed "buttons and features"  
 
 ### Bugs
+
+* Page is not working in Explorer. 
+
 
 ### Validator Testing 
 

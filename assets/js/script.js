@@ -1,8 +1,6 @@
 const questionNumber = document.getElementById ('number');
 const questionContainer = document.getElementById('question-container');
 const scoreArea = document.getElementById ('score-area');
-const results = document.getElementById ('score');
-
 
 let questionRandom = [];
 let questionCounter = 0;
@@ -55,13 +53,14 @@ function disableAnswers(isDisabled){
 
     if (isDisabled) {
       // Disable all answers
-      //el.classList.add('disabled');
-        // increments score and shows correct answer??
+    // increments score and shows correct answer
     if(el.innerHTML===questionRandom.answer){
         el.classList.add('correct');
         document.getElementById ('score').innerHTML= ++scoreCounter;
         }else {
         el.classList.add('incorrect');
+        document.getElementById ('score').innerHTML == 0;
+
         }
     } else {
         // Enable the answers
@@ -79,16 +78,12 @@ function disableAnswers(isDisabled){
 function next(){
     //If statement, showing new question when next is pressed and when questions are over shows "scores.html"
     if(questionCounter === gameData.length){
-        return window.location.assign('scores.html');
+        return window.location.assign('end.html');
     } else{
         newQuestion();
     }
 }
 
-function result(){
-    //set results
-    results.innerHTML = "Your score is: " + (scoreCounter) + " of " + gameData.length;
-}
 
 // Call funtions
 //first set all questions in availableQuestions Array.
@@ -96,4 +91,4 @@ setQuestions();
 //second call newQuestion(); function.
 newQuestion();
 
-//result();
+next();
