@@ -79,11 +79,6 @@
     border-color: black;
 }
 
-.disabled, .disabled:hover {
-    color:white;
-    background-color: silver;
-    border-color: white;
-}
 
 
 /*Media Quary*/

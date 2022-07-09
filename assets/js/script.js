@@ -1,12 +1,12 @@
-const questionNumber = document.getElementById ('number')
-const questionContainer = document.getElementById('question-container')
-const scoreArea = document.getElementById ('score-area')
-const nextButton = document.getElementById ('next')
-const results = document.getElementById ('results')
+const questionNumber = document.getElementById ('number');
+const questionContainer = document.getElementById('question-container');
+const scoreArea = document.getElementById ('score-area');
+const results = document.getElementById ('score');
 
+
+let questionRandom = [];
 let questionCounter = 0;
 let scoreCounter = 0;
-let currentQuestion;
 let availableQuestions= [];
 
 //Functions.
@@ -15,16 +15,16 @@ let availableQuestions= [];
 function setQuestions(){
     const totalQuestions = gameData.length;
     for (let i=0; i<totalQuestions; i++){       
-        availableQuestions.push(gameData[i])
+        availableQuestions.push(gameData[i]);
     }
 }
 
 //Set buttons in HTML with quiz.js options.
 function setChoices(questionRandom){
-    document.getElementById('btn1').innerHTML=questionRandom.options[0]
-    document.getElementById('btn2').innerHTML=questionRandom.options[1]
-    document.getElementById('btn3').innerHTML=questionRandom.options[2]
-    document.getElementById('btn4').innerHTML=questionRandom.options[3]
+    document.getElementById('btn1').innerHTML=questionRandom.options[0];
+    document.getElementById('btn2').innerHTML=questionRandom.options[1];
+    document.getElementById('btn3').innerHTML=questionRandom.options[2];
+    document.getElementById('btn4').innerHTML=questionRandom.options[3];
 }
 
 // create a randomize questions and options and add counter.
@@ -33,12 +33,12 @@ function newQuestion(){
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + gameData.length;
     //get random question/choices
     const index= Math.floor(Math.random() * availableQuestions.length);
-    const questionRandom = availableQuestions[index];
+    questionRandom = availableQuestions[index];
     questionContainer.innerHTML = questionRandom.question;
     //Avoid questions to repeat. 
     availableQuestions.splice(index, 1);
     //Call setChoices function with questionRandom so the choices are also randomized. 
-    setChoices(questionRandom)
+    setChoices(questionRandom);
 
     questionCounter ++ ;
     //Call disableAnswer(false), so when a new answer showns the answers can be chosen. 
@@ -55,25 +55,24 @@ function disableAnswers(isDisabled){
 
     if (isDisabled) {
       // Disable all answers
-      el.classList.add('disabled');
+      //el.classList.add('disabled');
+        // increments score and shows correct answer??
+    if(el.innerHTML===questionRandom.answer){
+        el.classList.add('correct');
+        document.getElementById ('score').innerHTML= ++scoreCounter;
+        }else {
+        el.classList.add('incorrect');
+        }
     } else {
         // Enable the answers
-        el.classList.remove('disabled');
+        el.classList.remove('correct');
+        el.classList.remove('incorrect');
     }
         // alert(el.innerHTML);
-        // el.classList.add('incorrect');
+     
    });
-
+  
 }
-function incrementScore(){
-    // increments score and shows correct answer??
-    if(el.innerHTML===answer){
-    el.classList.add('correct');
-    scoreCounter ++
-    }else {
-    el.classList.add('incorrect');
-    }
-    }
 
 
 
@@ -96,4 +95,5 @@ function result(){
 setQuestions();
 //second call newQuestion(); function.
 newQuestion();
-result();
+
+//result();
