@@ -74,9 +74,11 @@ The idea is simple, an image is displayed with the name of the animal in English
     ![JigsawValidator](/assets/images/imagesReadMe/jigsaw-validator.JPG)
 * JavaScript
     * No big error were found when passing through jshint.com. Game data shows as undifine as it is in other js page. 
+
     ![Jshint](/assets/images/imagesReadMe/jshint.JPG)
 * Accessibility 
-   * I confirmed that the colors and fonts chosen are easy to read and accessible by running through lighthouse in DevTools.    
+   * I confirmed that the colors and fonts chosen are easy to read and accessible by running through lighthouse in DevTools. 
+
    ![Accessibility](/assets/images/imagesReadMe/lightHouse.JPG)  
 
 
@@ -99,7 +101,7 @@ The live link can be found here - [Learn Spanish](https://saracandela.github.io/
 
 Code institute Slack community was checked to see common bugs with other students.
 
-Code institute mentor Adegbenga Adeye was consulted, and he help throuhout the project, especially buttons functions. He was gave some advice and suggestions.
+Code institute mentor Adegbenga Adeye was consulted, he helped on the buttons functions.
 
 Google is the primary spot consulted for alternative coding and general inspiration including [Stack Overlow](https://stackoverflow.com/) and [W3C schools](https://www.w3schools.com/).
 
