@@ -35,16 +35,15 @@ The idea is simple, an image is displayed with the name of the animal in English
 
 ![Correct Answers](/assets/images/imagesReadMe/correct-incorrect.JPG)
 
-* Score:
-    * If the answer is correct the score area will increase by 1.
-
-![Score](/assets/images/imagesReadMe/score.JPG)
-
 * Next button:
-    * Once the quesiton has been answer pressing next button will bring the user to the next quesition, when all the questions are answered will bring the user to an extra window where the results will be shown. 
+    * Once the quesiton has been answer pressing next button will bring the user to the next quesition, when all the questions are answered will bring the user to an extra window where they can repeat the test. 
 
 ![Next Button](/assets/images/imagesReadMe/Next.JPG)
 
+* Play again screen:
+    * When all the question has been answered this screen will show where you can find a button to play again. 
+
+![Play Again](/assets/images/imagesReadMe/end.JPG)
 
  ## Technologies used
 
@@ -74,7 +73,8 @@ The idea is simple, an image is displayed with the name of the animal in English
     * No errors were found when passing through the official (Jigsaw) validator. 
     ![JigsawValidator](/assets/images/imagesReadMe/jigsaw-validator.JPG)
 * JavaScript
-    * NO YET
+    * No big error were found when passing through jshint.com. Game data shows as undifine as it is in other js page. 
+    ![Jshint](/assets/images/imagesReadMe/jshint.JPG)
 * Accessibility 
    * I confirmed that the colors and fonts chosen are easy to read and accessible by running through lighthouse in DevTools.    
    ![Accessibility](/assets/images/imagesReadMe/lightHouse.JPG)  
@@ -82,7 +82,7 @@ The idea is simple, an image is displayed with the name of the animal in English
 
 ### Unfixed Bugs
 
-* NEEDS TO BE CHECK!!!
+* I will like to put a score counter in a future. I didnt have time to make it work properly so I decided to leave it without score for now. 
 
     
 ## Deployment 
@@ -99,7 +99,7 @@ The live link can be found here - [Learn Spanish](https://saracandela.github.io/
 
 Code institute Slack community was checked to see common bugs with other students.
 
-Code institute mentor Adegbenga Adeye was consulted, and a big help throuhout the project, especially buttons functions. He was a big support through advice and suggestions.
+Code institute mentor Adegbenga Adeye was consulted, and he help throuhout the project, especially buttons functions. He was gave some advice and suggestions.
 
 Google is the primary spot consulted for alternative coding and general inspiration including [Stack Overlow](https://stackoverflow.com/) and [W3C schools](https://www.w3schools.com/).
 

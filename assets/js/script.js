@@ -1,15 +1,14 @@
 const questionNumber = document.getElementById ('number');
 const questionContainer = document.getElementById('question-container');
-const scoreArea = document.getElementById ('score-area');
 
 let questionRandom = [];
 let questionCounter = 0;
-let scoreCounter = 0;
 let availableQuestions= [];
 
 //Functions.
 
-//Push the questions into availableQuestions Array.
+/**
+ *Push the questions into availableQuestions Array.*/
 function setQuestions(){
     const totalQuestions = gameData.length;
     for (let i=0; i<totalQuestions; i++){       
@@ -52,25 +51,23 @@ function disableAnswers(isDisabled){
     el.disabled = isDisabled;
 
     if (isDisabled) {
-      // Disable all answers
-    // increments score and shows correct answer
-    if(el.innerHTML===questionRandom.answer){
-        el.classList.add('correct');
-        document.getElementById ('score').innerHTML= ++scoreCounter;
-        }else {
-        el.classList.add('incorrect');
-        document.getElementById ('score').innerHTML == 0;
-
-        }
+        score(el);
     } else {
         // Enable the answers
         el.classList.remove('correct');
         el.classList.remove('incorrect');
     }
-        // alert(el.innerHTML);
-     
    });
   
+}
+
+function score(el) {
+    // increments score and shows correct answer
+    if(el.innerHTML===questionRandom.answer){
+        el.classList.add('correct');
+        }else {
+        el.classList.add('incorrect');  
+        }
 }
 
 
@@ -88,7 +85,4 @@ function next(){
 // Call funtions
 //first set all questions in availableQuestions Array.
 setQuestions();
-//second call newQuestion(); function.
-newQuestion();
-
 next();
