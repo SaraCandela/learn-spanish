@@ -19,29 +19,29 @@ An image is displayed with the name of the animal in English and four buttons wi
 ![Game Area](/assets/images/imagesReadMe/gamearea.JPG)
 
 * Question Counter:
-    * Counts the questions from 1 to 15 everytime the user goes to the next question.
+    * Counts the questions from 1 to 15 every time the user goes to the next question.
 
 ![Question counter](/assets/images/imagesReadMe/Questioncounter.JPG)
 
 * Question:
-    * Question is a convination between an image and a paragraph with the animal picture and name. 
+    * Question is a combination between an image and a paragraph with the animal picture and name. 
 
 ![Question](/assets/images/imagesReadMe/question.JPG)
 
 * Answers:
-    * Four buttons with the possible answers, when they are press if the answer is correct will show a green background and if the answer is incorrect will be red background. Once one answer is press the other anwers will be disabled. 
+    * Four buttons with the possible answers, when they are press if the answer is correct will show a green background and if the answer is incorrect, will be red background. Once one answer is press, the other answers will be disabled. 
 
 ![Answers](/assets/images/imagesReadMe/Options.JPG) 
 
 ![Correct Answers](/assets/images/imagesReadMe/correct-incorrect.JPG)
 
 * Next button:
-    * Once the quesiton has been answer pressing next button will bring the user to the next quesition, when all the questions are answered will bring the user to an extra window where they can repeat the test. 
+    * Once the question has been answer pressing "next" button will bring the user to the next question, when all the questions are answered will bring the user to an extra window where they can repeat the test. 
 
 ![Next Button](/assets/images/imagesReadMe/Next.JPG)
 
 * Play again screen:
-    * When all the question has been answered this screen will show where you can find a button to play again. 
+    * When all the question has been answered, this screen will show where you can find a button to play again. 
 
 ![Play Again](/assets/images/imagesReadMe/end.JPG)
 
@@ -73,7 +73,7 @@ An image is displayed with the name of the animal in English and four buttons wi
     * No errors were found when passing through the official (Jigsaw) validator. 
     ![JigsawValidator](/assets/images/imagesReadMe/jigsaw-validator.JPG)
 * JavaScript
-    * No big error were found when passing through jshint.com. Game data shows as undifine as it is in other js page. 
+    * No big error were found when passing through jshint.com. "Game data" shows as undefined as it is in other .js page. 
 
     ![Jshint](/assets/images/imagesReadMe/jshint.JPG)
 * Accessibility 
@@ -84,7 +84,7 @@ An image is displayed with the name of the animal in English and four buttons wi
 
 ### Unfixed Bugs
 
-* I will like to put a score counter in a future. I didnt have time to make it work properly so I decided to leave it without score for now. 
+* I will like to put a score counter in a future. I didn't have time to make it work properly, so I decided to leave it without score for now. 
 
     
 ## Deployment 
@@ -103,9 +103,9 @@ Code institute Slack community was checked to see common bugs with other student
 
 Code institute mentor Adegbenga Adeye was consulted, he helped on the buttons functions.
 
-Google is the primary spot consulted for alternative coding and general inspiration including [Stack Overlow](https://stackoverflow.com/) and [W3C schools](https://www.w3schools.com/).
+Google is the primary spot consulted for alternative coding and general inspiration, including [Stack Overlow](https://stackoverflow.com/) and [W3C schools](https://www.w3schools.com/).
 
-Youtube was used as consultation as well as inspiration from other quizes. 
+Youtube was used as consultation as well as inspiration from other quizzes. 
 
 ### Content 
 
