@@ -3,7 +3,7 @@
 Welcome to [Learn Spanish](https://saracandela.github.io/learn-spanish/).
 
 Learn Spanish is a quiz with 15 questions focus on start learning animals in Spanish for both kids and adults.
-The idea is simple, an image is displayed with the name of the animal in English and four buttons with the answers in Spanish.   
+An image is displayed with the name of the animal in English and four buttons with the answers in Spanish.   
 
 ![Responsive design](/assets/images/imagesReadMe/responsive-app.jpg)
 

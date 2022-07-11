@@ -16,7 +16,8 @@ function setQuestions(){
     }
 }
 
-//Set buttons in HTML with quiz.js options.
+/**
+ * Set buttons in HTML with quiz.js options.*/
 function setChoices(questionRandom){
     document.getElementById('btn1').innerHTML=questionRandom.options[0];
     document.getElementById('btn2').innerHTML=questionRandom.options[1];
@@ -24,7 +25,8 @@ function setChoices(questionRandom){
     document.getElementById('btn4').innerHTML=questionRandom.options[3];
 }
 
-// create a randomize questions and options and add counter.
+/**
+ * create a randomize questions, options and add counter. */ 
 function newQuestion(){
     //set question number
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + gameData.length;
@@ -51,7 +53,7 @@ function disableAnswers(isDisabled){
     el.disabled = isDisabled;
 
     if (isDisabled) {
-        score(el);
+        correctAnswer(el);
     } else {
         // Enable the answers
         el.classList.remove('correct');
@@ -61,8 +63,8 @@ function disableAnswers(isDisabled){
   
 }
 
-function score(el) {
-    // increments score and shows correct answer
+function correctAnswer(el) {
+    // shows correct answer
     if(el.innerHTML===questionRandom.answer){
         el.classList.add('correct');
         }else {
